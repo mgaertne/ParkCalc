@@ -1,0 +1,22 @@
+*** Settings ***
+Documentation  A test suite with a basic test for the EWT19 session.
+
+Resource       resource.txt
+
+
+*** Test Cases ***
+
+Basic Test
+    Open Browser  http://adam.goucher.ca/parkcalc/  firefox
+    Set Selenium Speed  0
+    Title Should Be  Parking Calculator
+    Select From List  Lot  Economy Parking
+    Input Text  EntryTime  01:23
+    Select Radio Button  EntryTimeAMPM  AM
+    Input Text  EntryDate  02/28/2000
+    Input Text  ExitTime  12:34
+    Select Radio Button  ExitTimeAMPM  AM
+    Input Text  ExitDate  03/01/2000
+    Click Button  Submit
+    Page Should Contain   (1 Days, 23 Hours, 11 Minutes)
+    [Teardown]  Close Browser

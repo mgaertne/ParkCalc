@@ -1,0 +1,40 @@
+*** Settings ***
+
+Documentation  A resource file containing the ParkCalc app specific keywords and variables that create our own domain specific language. Also SeleniumLibrary itself is imported here so that tests only need to import this resource file.
+
+Library        SeleniumLibrary
+
+
+*** Variables ***
+
+${BROWSER}       firefox
+${DELAY}         0
+${PARKCALC URL}  http://adam.goucher.ca/parkcalc/
+
+
+*** Keywords ***
+
+Open ParkCalc
+    Open Browser  ${PARKCALC URL}  ${BROWSER}
+    Set Selenium Speed  ${DELAY}
+    Title Should Be  Parking Calculator
+
+Input Parking Lot  [Arguments]  ${lot}
+    Select From List  Lot  ${lot}
+
+Input Entry Date  [Arguments]  ${date}  ${time}  ${ampm}
+    Input Text  EntryDate  ${date}
+    Input Text  EntryTime  ${time}
+    Select Radio Button  EntryTimeAMPM  ${ampm}
+
+Input Leaving Date  [Arguments]  ${date}  ${time}  ${ampm}
+    Input Text  ExitDate  ${date}
+    Input Text  ExitTime  ${time}
+    Select Radio Button  ExitTimeAMPM  ${ampm}
+
+Calculated Cost Should Be  [Arguments]  ${cost}
+    Click Button  Submit
+    ${actual} =  Get Text  xpath=//tr[td/div[@class='SubHead'] = 'COST']/td/span/font/b
+    Log  Actual costs: ${actual}
+    Page Should Contain  ${cost}
+

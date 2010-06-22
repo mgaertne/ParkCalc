@@ -1,0 +1,15 @@
+*** Settings ***
+Documentation  A test suite with a basic test for the EWT19 session.
+
+Resource       resource.txt
+
+
+*** Test Cases ***
+
+Basic Test
+    Open ParkCalc
+    Input Parking Lot  Short-Term Parking
+    Input Entry Date  12/31/2010  12:00  AM
+    Input Leaving Date  01/01/2011  12:00  AM 
+    Calculated Cost Should Be  $ 28.00
+    [Teardown]  Close Browser

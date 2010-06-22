@@ -1,0 +1,10 @@
+*** Settings ***
+Documentation  A test suite with a basic test for the EWT19 session.
+
+Resource       resource.txt
+
+
+*** Test Cases ***
+
+Basic Test
+    Park Calc  Valet Parking  05/04/2010  12:00  AM  05/05/2010  12:00  AM  $ 42.00

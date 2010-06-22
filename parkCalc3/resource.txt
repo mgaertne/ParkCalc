@@ -1,0 +1,29 @@
+*** Settings ***
+
+Documentation  A resource file containing the ParkCalc app specific keywords and variables that create our own domain specific language. Also SeleniumLibrary itself is imported here so that tests only need to import this resource file.
+
+Library        SeleniumLibrary
+
+
+*** Variables ***
+
+${BROWSER}       firefox
+${DELAY}         0
+
+
+*** Keywords ***
+
+Park Calc  [Arguments]  ${arg1}  ${arg2}  ${arg3}  ${arg4}  ${arg5}  ${arg6}  ${arg7}  ${arg8}
+    Open Browser  http://adam.goucher.ca/parkcalc/  firefox
+    Set Selenium Speed  0
+    Title Should Be  Parking Calculator
+    Select From List  Lot  ${arg1}
+    Input Text  EntryTime  ${arg3}
+    Select Radio Button  EntryTimeAMPM  ${arg4}
+    Input Text  EntryDate  ${arg2}
+    Input Text  ExitTime  ${arg6}
+    Select Radio Button  ExitTimeAMPM  ${arg7}
+    Input Text  ExitDate  ${arg5}
+    Click Button  Submit
+    Page Should Contain  ${arg8}
+    Close Browser
