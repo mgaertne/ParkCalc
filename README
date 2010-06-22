@@ -1,0 +1,10 @@
+This is a worked example based upon a testing session we ran in EWT19 (http://weekendtesting.com/archives/1131). This repository shows how to refactor and develop keyword based tests with RobotFramework.
+
+Here is the initial mission we provided:
+
+Product: ParkCalc (http://adam.goucher.ca/parkcalc/)
+
+Mission:
+The airport parking lot calculation tool raised the attention of some managers. There seem to be too many bugs in the application. Since they want to have it re-written, write a regression test suite based on the old application, which may be executed against the new application as well. Assume that the same interface will be kept. Use RobotFramework for your automated tests.
+
+As an oracle for your automated, use the rates mentioned on the official website: http://www.grr.org/ParkingRates.php
