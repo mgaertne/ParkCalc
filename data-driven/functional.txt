@@ -3,8 +3,13 @@ Documentation  A test suite with a basic test for the EWT19 session.
 
 Resource       resource.txt
 
+Suite Setup     Open Park Calc Page
+Suite Teardown  Close Browser
 
 *** Test Cases ***
 
 Valet Parking Test
-    Valet Parking  05/04/2010  12:00  AM  05/05/2010  12:00  AM  $ 42.00
+    Valet Parking  05/04/2010  12:00  AM  05/04/2010  01:00  AM  $ 12.00
+    Valet Parking  05/04/2010  12:00  AM  05/07/2010  12:00  AM  $ 54.00
+    Valet Parking  05/04/2010  12:00  AM  05/04/2010  05:00  AM  $ 12.00
+    Valet Parking  05/04/2010  12:00  AM  05/05/2010  12:00  AM  $ 18.00

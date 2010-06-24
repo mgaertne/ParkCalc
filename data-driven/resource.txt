@@ -9,13 +9,16 @@ Library        SeleniumLibrary
 
 ${BROWSER}       firefox
 ${DELAY}         0
-
+${PARKCALCPAGE}  http://adam.goucher.ca/parkcalc/
 
 *** Keywords ***
 
+Open Park Calc Page
+    Open Browser  ${PARKCALCPAGE}  ${BROWSER}
+    Set Selenium Speed  ${DELAY}
+    Title Should Be  Parking Calculator
+
 Park Calc  [Arguments]  ${parkingLot}  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
-    Open Browser  http://adam.goucher.ca/parkcalc/  firefox
-    Set Selenium Speed  0
     Title Should Be  Parking Calculator
     Select From List  Lot  ${parkingLot}
     Input Text  EntryTime  ${entryTime}
@@ -25,8 +28,7 @@ Park Calc  [Arguments]  ${parkingLot}  ${entryDate}  ${entryTime}  ${entryAmPm} 
     Select Radio Button  ExitTimeAMPM  ${exitAmPm}
     Input Text  ExitDate  ${exitDate}
     Click Button  Submit
-    Page Should Contain  ${expectedPrice}
-    Close Browser
+    Run Keyword And Continue On Failure  Page Should Contain  ${expectedPrice}
 
 Valet Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
     Park Calc   Valet Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
