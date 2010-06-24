@@ -33,3 +33,14 @@ Park Calc  [Arguments]  ${parkingLot}  ${entryDate}  ${entryTime}  ${entryAmPm} 
 Valet Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
     Park Calc   Valet Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
 
+Short-Term Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+    Park Calc   Short-Term Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+
+Long-Term Garage Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+    Park Calc   Long-Term Garage Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+
+Long-Term Surface Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+    Park Calc   Long-Term Surface Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+
+Economy Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
+    Park Calc   Economy Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
