@@ -28,7 +28,15 @@ Park Calc  [Arguments]  ${parkingLot}  ${entryDate}  ${entryTime}  ${entryAmPm} 
     Select Radio Button  ExitTimeAMPM  ${exitAmPm}
     Input Text  ExitDate  ${exitDate}
     Click Button  Submit
-    Run Keyword And Continue On Failure  Page Should Contain  ${expectedPrice}
+    Run Keyword And Continue On Failure  Calculated Cost Should Be  ${expectedPrice}
+
+
+Calculated Cost Should Be  [Arguments]  ${expectedCost}
+    Click Button  Submit
+    ${actualCost} =  Get Text  xpath=//tr[td/div[@class='SubHead'] = 'COST']/td/span/font/b
+    Log  Actual costs: ${actualCost}
+    Page Should Contain  ${expectedCost}
+
 
 Valet Parking  [Arguments]  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
     Park Calc   Valet Parking  ${entryDate}  ${entryTime}  ${entryAmPm}  ${exitDate}  ${exitTime}  ${exitAmPm}  ${expectedPrice}
