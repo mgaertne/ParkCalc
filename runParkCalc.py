@@ -6,10 +6,10 @@ Tests are run by giving a path to the tests to be executed as an argument to
 this script. Possible Robot Framework options are given before the path.
 
 Examples:
-  rundemo.py parkCalc1                          # Run all tests in a directory
-  rundemo.py parkCalc1/calc1.txt                # Run tests in a specific file
-  rundemo.py --variable BROWSER:IE parkCalc1    # Override variable
-  rundemo.py -v BROWSER:IE -v DELAY:0.5 parkCalc1
+  runParkCalc.py parkCalc1                          # Run all tests in a directory
+  runParkCalc.py parkCalc1/calc1.txt                # Run tests in a specific file
+  runParkCalc.py --variable BROWSER:IE parkCalc1    # Override variable
+  runParkCalc.py -v BROWSER:IE -v DELAY:0.5 parkCalc1
 
 By default tests are executed with Firefox browser, but this can be changed
 by overriding the `BROWSER` variable as illustrated above. Similarly it is
@@ -56,8 +56,8 @@ def print_help():
     print __doc__
 
 def print_usage():
-    print 'Usage: rundemo.py [options] datasource'
-    print '   or: rundemo.py help'
+    print 'Usage: runParkCalc.py [options] datasource'
+    print '   or: runParkCalc.py help'
 
 
 if __name__ == '__main__':
