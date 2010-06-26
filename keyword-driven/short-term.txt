@@ -3,13 +3,13 @@ Documentation  A test suite with functional tests for ParkCalc in a keyword-driv
 
 Resource       resource.txt
 
+Suite Setup     Open ParkCalc
+Test Setup      Input Parking Lot  Short-Term Parking
+Suite Teardown  Close Browser
 
 *** Test Cases ***
 
-Basic Test
-    Open ParkCalc
-    Input Parking Lot  Short-Term Parking
+First Day
     Input Entry Date  12/31/2010  12:00  AM
     Input Leaving Date  01/01/2011  12:00  AM 
-    Calculated Cost Should Be  $ 28.00
-    [Teardown]  Close Browser
+    Calculated Cost Should Be  $ 24.00
