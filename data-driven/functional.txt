@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  A test suite with a basic test for the EWT19 session.
+Documentation  A test suite with functional tests for ParkCalc in a data-driven format.
 
 Resource       resource.txt
 
