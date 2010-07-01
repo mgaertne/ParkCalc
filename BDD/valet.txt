@@ -1,0 +1,15 @@
+*** Settings ***
+Documentation  A test suite with test cases for valet parking.
+
+Resource       resource.txt
+
+Suite Setup     Open ParkCalc
+Suite Teardown  Close Browser
+
+*** Test Cases ***
+
+Less Than Five Hours
+    Given I want to use  Valet Parking
+    When I park for less then five hours
+    Then the calculated costs should be  $ 12.00
+
