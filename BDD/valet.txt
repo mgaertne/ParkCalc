@@ -10,6 +10,20 @@ Suite Teardown  Close Browser
 
 Less Than Five Hours
     Given I want to use  Valet Parking
-    When I park for less then five hours
+    When I park  @{FOR_ONE_HOUR}
     Then the calculated costs should be  $ 12.00
 
+Exactly Five Hours
+    Given I want to use  Valet Parking
+    When I park  @{FOR_FIVE_HOURS}
+    Then the calculated costs should be  $ 12.00
+
+More Than Five Hours
+    Given I want to use  Valet Parking
+    When I park  @{FOR_SIX_HOURS}
+    Then the calculated costs should be  $ 18.00
+
+Multiple Days
+    Given I want to use  Valet Parking
+    When I park  @{FOR_FOUR_DAYS}
+    Then the calculated costs should be  $ 72.00
