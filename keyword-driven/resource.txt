@@ -10,14 +10,15 @@ Library        SeleniumLibrary
 ${BROWSER}       firefox
 ${DELAY}         0
 ${PARKCALC URL}  http://adam.goucher.ca/parkcalc/
-
+${COST_ITEM}     xpath=//tr[td/div[@class='SubHead'] = 'COST']/td/span/font/b
+${PAGE_TITLE}    Parking Calculator
 
 *** Keywords ***
 
 Open ParkCalc
     Open Browser  ${PARKCALC URL}  ${BROWSER}
     Set Selenium Speed  ${DELAY}
-    Title Should Be  Parking Calculator
+    Title Should Be  ${PAGE_TITLE}
 
 Input Parking Lot  [Arguments]  ${lot}
     Select From List  Lot  ${lot}
@@ -34,7 +35,7 @@ Input Leaving Date  [Arguments]  ${date}  ${time}  ${ampm}
 
 Calculated Cost Should Be  [Arguments]  ${cost}
     Click Button  Submit
-    ${actual} =  Get Text  xpath=//tr[td/div[@class='SubHead'] = 'COST']/td/span/font/b
+    ${actual} =  Get Text  ${COST_ITEM}
     Log  Actual costs: ${actual}
     Page Should Contain  ${cost}
 
