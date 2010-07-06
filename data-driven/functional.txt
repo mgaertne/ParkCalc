@@ -29,43 +29,43 @@ Suite Teardown  Close Browser
 *** Test Cases ***
 
 Valet Parking Test
-    Valet Parking  @{FOR_ONE_HOUR}    $ 12.00
-    Valet Parking  @{FOR_FIVE_HOURS}  $ 12.00
-    Valet Parking  @{FOR_ONE_DAY}     $ 18.00
-    Valet Parking  @{FOR_THREE_DAYS}  $ 54.00
+    Run Keyword And Continue On Failure  Valet Parking  @{FOR_ONE_HOUR}    $ 12.00
+    Run Keyword And Continue On Failure  Valet Parking  @{FOR_FIVE_HOURS}  $ 12.00
+    Run Keyword And Continue On Failure  Valet Parking  @{FOR_ONE_DAY}     $ 18.00
+    Run Keyword And Continue On Failure  Valet Parking  @{FOR_THREE_DAYS}  $ 54.00
 
 Short-Term Parking
-    Short-Term Parking  @{FOR_ONE_HOUR}             $ 2.00
-    Short-Term Parking  @{FOR_ONE_AND_A_HALF_HOUR}  $ 3.00
-    Short-Term Parking  @{FOR_THREE_HOURS}          $ 6.00
-    Short-Term Parking  @{FOR_TWELVE_HOURS}         $ 24.00
-    Short-Term Parking  @{FOR_TWENTY_THREE_HOURS}   $ 24.00
-    Short-Term Parking  @{FOR_TWO_DAYS}             $ 48.00
+    Run Keyword And Continue On Failure  Short-Term Parking  @{FOR_ONE_HOUR}             $ 2.00
+    Run Keyword And Continue On Failure  Short-Term Parking  @{FOR_ONE_AND_A_HALF_HOUR}  $ 3.00
+    Run Keyword And Continue On Failure  Short-Term Parking  @{FOR_THREE_HOURS}          $ 6.00
+    Run Keyword And Continue On Failure  Short-Term Parking  @{FOR_TWELVE_HOURS}         $ 24.00
+    Run Keyword And Continue On Failure  Short-Term Parking  @{FOR_TWENTY_THREE_HOURS}   $ 24.00
+    Run Keyword And Continue On Failure  Short-Term Parking  @{FOR_TWO_DAYS}             $ 48.00
 
 Long-Term Garage Parking
-    Long-Term Garage Parking  @{FOR_ONE_HOUR}     $ 2.00
-    Long-Term Garage Parking  @{FOR_THREE_HOURS}  $ 6.00
-    Long-Term Garage Parking  @{FOR_SIX_HOURS}    $ 12.00
-    Long-Term Garage Parking  @{FOR_SEVEN_HOURS}  $ 12.00
-    Long-Term Garage Parking  @{FOR_SIX_DAYS}     $ 72.00
-    Long-Term Garage Parking  @{FOR_ONE_WEEK}     $ 72.00
-    Long-Term Garage Parking  @{FOR_THREE_WEEKS}  $ 216.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_ONE_HOUR}     $ 2.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_THREE_HOURS}  $ 6.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_SIX_HOURS}    $ 12.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_SEVEN_HOURS}  $ 12.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_SIX_DAYS}     $ 72.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_ONE_WEEK}     $ 72.00
+    Run Keyword And Continue On Failure  Long-Term Garage Parking  @{FOR_THREE_WEEKS}  $ 216.00
 
 Long-Term Surface Parking
-    Long-Term Surface Parking  @{FOR_ONE_HOUR}     $ 2.00
-    Long-Term Surface Parking  @{FOR_THREE_HOURS}  $ 6.00
-    Long-Term Surface Parking  @{FOR_FIVE_HOURS}   $ 10.00
-    Long-Term Surface Parking  @{FOR_SIX_HOURS}    $ 10.00
-    Long-Term Surface Parking  @{FOR_SIX_DAYS}     $ 60.00
-    Long-Term Surface Parking  @{FOR_ONE_WEEK}     $ 60.00
-    Long-Term Surface Parking  @{FOR_THREE_WEEKS}  $ 180.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_ONE_HOUR}     $ 2.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_THREE_HOURS}  $ 6.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_FIVE_HOURS}   $ 10.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_SIX_HOURS}    $ 10.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_SIX_DAYS}     $ 60.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_ONE_WEEK}     $ 60.00
+    Run Keyword And Continue On Failure  Long-Term Surface Parking  @{FOR_THREE_WEEKS}  $ 180.00
 
 Economy Parking
-    Economy Parking  @{FOR_ONE_HOUR}     $ 2.00
-    Economy Parking  @{FOR_THREE_HOURS}  $ 6.00
-    Economy Parking  @{FOR_FOUR_HOURS}   $ 8.00
-    Economy Parking  @{FOR_FIVE_HOURS}   $ 9.00
-    Economy Parking  @{FOR_SIX_HOURS}    $ 9.00
-    Economy Parking  @{FOR_SIX_DAYS}     $ 54.00
-    Economy Parking  @{FOR_ONE_WEEK}     $ 54.00
-    Economy Parking  @{FOR_THREE_WEEKS}  $ 162.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_ONE_HOUR}     $ 2.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_THREE_HOURS}  $ 6.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_FOUR_HOURS}   $ 8.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_FIVE_HOURS}   $ 9.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_SIX_HOURS}    $ 9.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_SIX_DAYS}     $ 54.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_ONE_WEEK}     $ 54.00
+    Run Keyword And Continue On Failure  Economy Parking  @{FOR_THREE_WEEKS}  $ 162.00

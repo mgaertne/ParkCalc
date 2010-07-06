@@ -30,11 +30,10 @@ Park Calc  [Arguments]  ${parkingLot}  ${entryDate}  ${entryTime}  ${entryAmPm} 
     Select Radio Button  ExitTimeAMPM  ${exitAmPm}
     Input Text  ExitDate  ${exitDate}
     Click Button  Submit
-    Run Keyword And Continue On Failure  Calculated Cost Should Be  ${expectedPrice}
+    Calculated Cost Should Be  ${expectedPrice}
 
 
 Calculated Cost Should Be  [Arguments]  ${expectedCost}
-    Click Button  Submit
     ${actualCost} =  Get Text  ${COST_ITEM}
     Log  Actual costs: ${actualCost}
     Page Should Contain  ${expectedCost}
