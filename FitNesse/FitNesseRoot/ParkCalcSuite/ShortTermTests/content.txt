@@ -1,0 +1,7 @@
+!define PARKING_LOT {Short-Term Parking}
+
+!|script                                            |
+|one hour              |${PARKING_LOT}|costs|$ 2.00 |
+|one and a half hour   |${PARKING_LOT}|cost |$ 3.00 |
+|three hours           |${PARKING_LOT}|cost |$ 6.00 |
+|twelve and a half hour|${PARKING_LOT}|cost |$ 24.00|

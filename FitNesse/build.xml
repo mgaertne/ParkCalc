@@ -1,0 +1,28 @@
+<project name="ParkCalcTests" default="all" basedir=".">
+	<description>
+    	ParkCalc tests using Slim
+  	</description>
+
+	<property name="testSuite" value="ParkCalcSuite" />
+
+	<target name="all" depends="acceptance_tests" />
+
+	<target name="acceptance_tests_xml">
+		<java jar="fitnesse.jar" failonerror="true" fork="true" output="parkcalc-results.xml">
+			<arg value="-c" />
+			<arg value="${testSuite}?suite&amp;format=xml" />
+			<arg value="-p" />
+			<arg value="9234" />
+		</java>
+	</target>
+
+	<target name="acceptance_tests">
+		<java jar="fitnesse.jar" failonerror="true" fork="true">
+			<arg value="-c" />
+			<arg value="${testSuite}?suite&amp;format=text" />
+			<arg value="-p" />
+			<arg value="9234" />
+		</java>
+	</target>
+
+</project>

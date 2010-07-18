@@ -1,0 +1,8 @@
+!define PARKING_LOT {Valet Parking}
+
+!|script                                |
+|one hour  |${PARKING_LOT}|costs|$ 12.00|
+|four hours|${PARKING_LOT}|cost |$ 12.00|
+|five hours|${PARKING_LOT}|cost |$ 12.00|
+|six hours |${PARKING_LOT}|cost |$ 18.00|
+|four days |${PARKING_LOT}|cost |$ 72.00|

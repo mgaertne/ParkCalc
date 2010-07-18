@@ -1,23 +1,44 @@
 !|scenario |one hour   |parkingLot|costs     |costs                                              |
 |parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||12:59||AM|costs|@costs|
 
-!|scenario|four hours |parkingLot|cost |costs|
+!|scenario |one and a half hour|parkingLot|cost      |costs                                              |
+|parking in|@parkingLot        |from      |05/04/2010||12:00||AM|until|05/04/2010||01:29||AM|costs|@costs|
+
+!|scenario |three hours|parkingLot|cost      |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||03:00||AM|costs|@costs|
+
+!|scenario |four hours |parkingLot|cost      |costs                                              |
 |parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||04:00||AM|costs|@costs|
 
-!|scenario|five hours |parkingLot|cost |costs|
+!|scenario |five hours |parkingLot|cost      |costs                                              |
 |parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||05:00||AM|costs|@costs|
 
-!|scenario|first day  |parkingLot|costs|costs|
+!|scenario |six hours  |parkingLot|cost      |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||06:00||AM|costs|@costs|
+
+!|scenario |seven hours|parkingLot|cost      |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||07:00||AM|costs|@costs|
+
+!|scenario |twelve and a half hour|parkingLot|cost      |costs                                              |
+|parking in|@parkingLot           |from      |05/04/2010||12:00||AM|until|05/04/2010||12:30||PM|costs|@costs|
+
+!|scenario |first day  |parkingLot|costs     |costs                                              |
 |parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/05/2010||12:00||AM|costs|@costs|
 
-!|scenario|four days  |parkingLot|cost |costs|
+!|scenario |four days  |parkingLot|cost      |costs                                              |
 |parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/08/2010||12:00||AM|costs|@costs|
 
-!|scenario|first week |parkingLot|costs|costs|
-|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/11/2010||12:59||AM|costs|@costs|
+!|scenario |five days  |parkingLot|cost      |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/09/2010||12:00||AM|costs|@costs|
 
-!|scenario|three weeks|parkingLot|cost |costs|
-|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/25/2010||12:59||AM|costs|@costs|
+!|scenario |six days   |parkingLot|cost      |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/10/2010||12:00||AM|costs|@costs|
+
+!|scenario |first week |parkingLot|costs     |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/11/2010||12:00||AM|costs|@costs|
+
+!|scenario |three weeks|parkingLot|cost      |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/25/2010||12:00||AM|costs|@costs|
 
 ----
 !|scenario         |parking in|parkingLot|from      |entryDate||entryTime||entryAmPm|until|exitDate||exitTime||exitAmPm|costs|costs|

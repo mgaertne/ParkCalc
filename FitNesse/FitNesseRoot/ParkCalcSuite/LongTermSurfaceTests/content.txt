@@ -1,0 +1,10 @@
+!define PARKING_LOT {Long-Term Surface Parking}
+
+!|script                                  |
+|one hour   |${PARKING_LOT}|costs|$ 2.00  |
+|three hours|${PARKING_LOT}|cost |$ 6.00  |
+|six hours  |${PARKING_LOT}|cost |$ 10.00 |
+|first day  |${PARKING_LOT}|costs|$ 10.00 |
+|five days  |${PARKING_LOT}|cost |$ 50.00 |
+|first week |${PARKING_LOT}|costs|$ 60.00 |
+|three weeks|${PARKING_LOT}|cost |$ 180.00|
