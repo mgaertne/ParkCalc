@@ -1,15 +1,35 @@
-!define PAGE_LOAD_TIMEOUT {5000}
+!|scenario |one hour   |parkingLot|costs     |costs                                              |
+|parking in|@parkingLot|from      |05/04/2010||12:00||AM|until|05/04/2010||12:59||AM|costs|@costs|
+
 !define COST_ITEM {xpath=//tr[td/div[@class='SubHead'] = 'COST']/td/span/font/b}
 
-!|scenario            |one hour     |parkingLot       |costs    |costs     |
-|select               |Lot          |                 |@parkingLot         |
-|type                 |EntryTime    |                 |12:00               |
-|make checked         |xpath=//input[@name='EntryTimeAMPM' and @value='AM']|
-|type                 |EntryDate    |                 |05/04/2010          |
-|type                 |ExitTime     |                 |12:59               |
-|make checked         |xpath=//input[@name='ExitTimeAMPM' and @value='AM'] |
-|type                 |ExitDate     |                 |05/04/2010          |
-|click                |Submit                                              |
-|wait for page to load|${PAGE_LOAD_TIMEOUT}                                |
-|$ACTUAL_COSTS=       |get text     |${COST_ITEM}                          |
-|check                |echo         |$ACTUAL_COSTS    |         |@costs    |
+!|scenario     |verify costs|costs                |
+|$ACTUAL_COSTS=|get text    |${COST_ITEM}         |
+|check         |echo        |$ACTUAL_COSTS||@costs|
+
+!define PAGE_LOAD_TIMEOUT {5000}
+
+!|scenario            |click|button|and wait for page to load|
+|click                |@button                               |
+|wait for page to load|${PAGE_LOAD_TIMEOUT}                  |
+
+!|scenario   |enter entry date   |date   |and time  |time  |  |ampm  |
+|type        |EntryTime          |       |@time                      |
+|make checked|xpath=//input[@name='EntryTimeAMPM' and @value='@ampm']|
+|type        |EntryDate          |       |@date                      |
+
+!|scenario   |enter exit date   |date   |and time  |time  |  |ampm  |
+|type        |ExitTime          |       |@time                      |
+|make checked|xpath=//input[@name='ExitTimeAMPM' and @value='@ampm']|
+|type        |ExitDate          |       |@date                      |
+
+!|scenario|select parking lot|parkingLot  |
+|select   |Lot               ||@parkingLot|
+
+!|scenario         |parking in|parkingLot|from      |entryDate||entryTime||entryAmPm|until|exitDate||exitTime||exitAmPm|costs|costs|
+|select parking lot|@parkingLot                                                                                                    |
+|enter entry date  |@entryDate|and time  |@entryTime|         |@entryAmPm                                                          |
+|enter exit date   |@exitDate |and time  |@exitTime |         |@exitAmPm                                                           |
+|click             |Submit    |and wait for page to load                                                                           |
+|verify costs      |@costs                                                                                                         |
+
