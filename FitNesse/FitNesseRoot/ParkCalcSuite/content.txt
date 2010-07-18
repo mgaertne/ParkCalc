@@ -1,0 +1,9 @@
+A [[!-ParkCalc-!][http://adam.goucher.ca/ParkCalc]] test suite using Slim.
+
+----
+!define TEST_SYSTEM {slim}
+!*< Classpath setup
+!path lib/*.jar
+*!
+
+!contents -R2 -g -p -f -h
