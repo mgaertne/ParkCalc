@@ -1,0 +1,15 @@
+!define PAGE_LOAD_TIMEOUT {5000}
+!define COST_ITEM {xpath=//tr[td/div[@class='SubHead'] = 'COST']/td/span/font/b}
+
+!|scenario            |one hour     |parkingLot       |costs    |costs     |
+|select               |Lot          |                 |@parkingLot         |
+|type                 |EntryTime    |                 |12:00               |
+|make checked         |xpath=//input[@name='EntryTimeAMPM' and @value='AM']|
+|type                 |EntryDate    |                 |05/04/2010          |
+|type                 |ExitTime     |                 |12:59               |
+|make checked         |xpath=//input[@name='ExitTimeAMPM' and @value='AM'] |
+|type                 |ExitDate     |                 |05/04/2010          |
+|click                |Submit                                              |
+|wait for page to load|${PAGE_LOAD_TIMEOUT}                                |
+|$ACTUAL_COSTS=       |get text     |${COST_ITEM}                          |
+|check                |echo         |$ACTUAL_COSTS    |         |@costs    |
