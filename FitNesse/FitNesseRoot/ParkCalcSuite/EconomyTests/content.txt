@@ -1,2 +1,10 @@
-!|script                              |
-|one hour|Economy Parking|costs|$ 2.00|
+!define PARKING_LOT {Economy Parking}
+
+!|script                                  |
+|one hour   |${PARKING_LOT}|costs|$ 2.00  |
+|four hours |${PARKING_LOT}|cost |$ 8.00  |
+|five hours |${PARKING_LOT}|cost |$ 9.00  |
+|first day  |${PARKING_LOT}|costs|$ 9.00  |
+|four days  |${PARKING_LOT}|cost |$ 36.00 |
+|first week |${PARKING_LOT}|costs|$ 54.00 |
+|three weeks|${PARKING_LOT}|cost |$ 162.00|
